@@ -148,7 +148,7 @@ install () {
         echo "Cloning Tinkerpie RetroPie fork"
         git clone --depth=1 https://github.com/Tinkerpie/RetroPie-Setup.git
         
-        echo "Installation complete. Run 'sudo ~/Retropie-Setup/retropie_setup.sh' and install the core packages and samba (optional) and then install your emulators."
+        echo "Installation complete. Run 'sudo ~/Retropie-Setup/retropie_setup.sh' and then reboot your system. Then you can install the packages from RetroPie-Setup."
     fi
     
 }
