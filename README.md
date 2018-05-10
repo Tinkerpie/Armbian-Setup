@@ -15,18 +15,18 @@ A setup script to run on top of Armbian Debian in order to set up the necessary 
 
 # Bluetooth
 
-After running the setup.sh (which also sets up bluetooth) do the following:
-*sudo bluetoothctl*
-[bluetooth]# *agent on*
-Agent registered
-[bluetooth]# *default-agent*
-Default agent request successful
-[bluetooth]# *power on*
-Changing power on succeeded
-[bluetooth]# *exit*
+After running the setup.sh (which also sets up bluetooth) do the following:  
+*sudo bluetoothctl*  
+[bluetooth]# *agent on*  
+Agent registered  
+[bluetooth]# *default-agent*  
+Default agent request successful  
+[bluetooth]# *power on*  
+Changing power on succeeded  
+[bluetooth]# *exit*  
 
 
 # Sound over HDMI
 
-*sudo nano /usr/share/alsa/alsa.conf*
+*sudo nano /usr/share/alsa/alsa.conf*  
 Change defaults.pcm.card 0 to 1
