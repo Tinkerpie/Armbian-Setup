@@ -131,6 +131,8 @@ install () {
         echo "Installing MPP"
         git clone https://github.com/rockchip-linux/mpp.git
         cd mpp
+        # Upstream seems to be broken, this is the last working commit
+        git checkout -b last-working fb73f23f53
         cmake -src-dir ~/mpp -DRKPLATFORM=ON -DHAVE_DRM=ON
         make -j4 && sudo make install
         cd ~
