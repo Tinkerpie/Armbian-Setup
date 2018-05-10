@@ -150,6 +150,11 @@ install () {
         echo "Cloning Tinkerpie RetroPie fork"
         git clone --depth=1 https://github.com/Tinkerpie/RetroPie-Setup.git
         
+        echo "Installing bluetooth"
+        sudo apt install bluetooth
+        sudo rfkill unblock all
+        sudo systemctl restart tinker-bluetooth.service
+        
         echo "Installation complete. Run 'sudo ~/RetroPie-Setup/retropie_setup.sh' and then reboot your system. Then you can install the packages from RetroPie-Setup."
     fi
     
