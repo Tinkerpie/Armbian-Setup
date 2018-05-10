@@ -15,7 +15,7 @@ A setup script to run on top of Armbian Debian in order to set up the necessary 
 
 # Bluetooth
 
-After running the setup.sh (which also sets up bluetooth) do the following:  
+After running the setup.sh (which also sets up bluetooth) do the following to complete the process:  
 *sudo bluetoothctl*  
 [bluetooth]# *agent on*  
 Agent registered  
