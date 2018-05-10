@@ -11,3 +11,22 @@ A setup script to run on top of Armbian Debian in order to set up the necessary 
 6. To set up WiFi - Type *sudo armbian-config*. Go to *Network* and then *wlan0*. Go to *WiFi* then choose your SSID and enter your password. Don't set up bluetooth or anything yet. Go back to the command prompt once you have an Internet conection.
 7. Type *wget https://github.com/Tinkerpie/Armbian-Setup/raw/master/setup.sh*, *sudo chmod +x setup.sh* and then *./setup.sh*.
 8. Once everything has installed, run RetroPie-Setup/retropie_setup.sh as indicated in the output of the above script and install core packages and restart.
+
+
+# Bluetooth
+
+After running the setup.sh (which also sets up bluetooth) do the following:
+*sudo bluetoothctl*
+[bluetooth]# *agent on*
+Agent registered
+[bluetooth]# *default-agent*
+Default agent request successful
+[bluetooth]# *power on*
+Changing power on succeeded
+[bluetooth]# *exit*
+
+
+# Sound over HDMI
+
+*sudo nano /usr/share/alsa/alsa.conf*
+Change defaults.pcm.card 0 to 1
