@@ -115,7 +115,7 @@ install () {
         sudo apt install -y xutils-dev
         git clone --branch rockchip-2.4.74 https://github.com/rockchip-linux/libdrm-rockchip.git
         cd libdrm-rockchip
-        ./autogen.sh --disable-intel --enable-rockchip-experimental-api
+        ./autogen.sh --disable-intel --enable-rockchip-experimental-api --disable-freedreno --disable-tegra --disable-vmwgfx --disable-vc4 --disable-radeon --disable-amdgpu --disable-nouveau
         make -j4 && sudo make install
         cd ~
         rm -rf libdrm-rockchip
